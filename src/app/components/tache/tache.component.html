@@ -1,0 +1,26 @@
+<div class="table-container">
+    <h4>Liste des absences par tache</h4>
+    <table style="border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>Nom Complete</th>
+                <th>Date</th>
+                <th>Heure de debut</th>
+                <th>Heure de fin</th>
+                <th>Motif</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let t of tache">
+                <td> {{t.personne.nom}} </td>
+                <td> {{t.date}} </td>
+                <td> {{t.heure_debut}} </td>
+                <td> {{t.heure_fin}} </td>
+                <td> {{t.motif}} </td>
+            </tr>
+        </tbody>
+    </table>
+    <div *ngIf="!(tache | keyvalue)?.length" class=" mt-4 alert alert-danger text-center">Y'a pas d'absence pour cette tache </div>
+
+</div>

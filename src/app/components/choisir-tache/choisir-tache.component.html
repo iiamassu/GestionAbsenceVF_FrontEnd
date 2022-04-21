@@ -1,0 +1,43 @@
+<div class="table-container">
+    <label class="text-tache" for="">Veuillez Sélectionner une tache: </label>
+    <select name="tache" id="" class="form-select mb-4 select-tache" [(ngModel)]="index1">
+      <option disabled selected value="0">Sélectionner une tache</option>
+      <option value="1">Développement web</option>
+      <option value="2">Réseaux</option>
+      <option value="3">Système d'information</option>
+      <option value="4">Énergétique</option>
+      <option value="5">Électronique</option>
+      <option value="6">Automatique</option>
+      <option value="7">Électrochimie</option>
+      <option value="8">Chimie théorique</option>
+      <option value="9">Chimie Organique</option>
+    </select>
+    <button class="btn btn-primary btn-tache" (click)="choisir(index1)">Afficher les absences</button>
+</div>
+
+<div class=" mt-4 table-container">
+    <div class="row">
+        <div class="col-6">
+            <label class="text-tache" for="">Veuillez Entrer le matricule de personne: </label>
+            <input type="text" class="form-control input-tache" placeholder="Matricule ..." [(ngModel)]="mat">
+        </div>
+        <div class="col-6">
+            <label class="text-tache" for="">Veuillez Sélectionner une tache: </label>
+            <select name="tache" id="" class="form-select mb-4 select-tache" [(ngModel)]="index2">
+        <option disabled selected value="0">Sélectionner une tache</option>
+        <option value="1">Développement web</option>
+        <option value="2">Réseaux</option>
+        <option value="3">Système d'information</option>
+        <option value="4">Énergétique</option>
+        <option value="5">Électronique</option>
+        <option value="6">Automatique</option>
+        <option value="7">Électrochimie</option>
+        <option value="8">Chimie théorique</option>
+        <option value="9">Chimie Organique</option>
+      </select>
+        </div>
+
+    </div>
+    <button class="btn btn-primary btn-tache" (click)="choisir2(index2,mat)">Afficher les absences</button>
+
+</div>

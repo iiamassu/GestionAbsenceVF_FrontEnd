@@ -1,0 +1,44 @@
+<div class="formulaire table-container">
+    <h1 class="mb-3">Ajouter Absence Enseignant</h1>
+    <form>
+        <div class="mb-3">
+            <label for="">Nom Complet</label>
+            <input type="text" class="form-control" placeholder="Nom" [(ngModel)]="nom" [ngModelOptions]="{standalone: true}" disabled="disabled">
+        </div>
+        <div class="mb-3">
+            <label for="">Date</label>
+            <input type="date" class="form-control" placeholder="Date" [(ngModel)]="abs.date" name="date">
+        </div>
+        <div class="row">
+            <div class="mb-3 col-4">
+                <label for="">Heure de début</label>
+                <input type="text" class="form-control" placeholder="Heure de début" [(ngModel)]="abs.heure_debut" name="hd">
+            </div>
+            <div class="mb-3 col-4">
+                <label for="">Heure de fin</label>
+                <input type="text" class="form-control" placeholder="Heure de fin" [(ngModel)]="abs.heure_fin" name="hf">
+            </div>
+            <div class="mb-3 col-4">
+                <label for="">Tache</label>
+                <!-- <input type="text" class="form-control" placeholder="Tache" [(ngModel)]="abs.heure_fin" name="hf"> -->
+                <select name="tache" id="" class="form-select" [(ngModel)]="tache.id">
+                <option disabled selected value="0">Sélectionner une tache</option>
+                <option value="1">Développement web</option>
+                <option value="2">Réseaux</option>
+                <option value="3">Système d'information</option>
+                <option value="4">Énergétique</option>
+                <option value="5">Électronique</option>
+                <option value="6">Automatique</option>
+                <option value="7">Électrochimie</option>
+                <option value="8">Chimie théorique</option>
+                <option value="9">Chimie Organique</option>
+              </select>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="">Motif</label>
+            <textarea type="password" class="form-control" placeholder="Motif" [(ngModel)]="abs.motif" name="motif"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary col-12" (click)="insert()">Ajouter</button>
+    </form>
+</div>

@@ -1,0 +1,29 @@
+<div class="table-container">
+    <h4>Liste Etudiants</h4>
+    <table style="border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>Matricule</th>
+                <th>Nom</th>
+                <th>Ajouter Absence</th>
+                <th>Les Absence</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let etudiant of etudiants">
+                <td>{{etudiant.mat}}</td>
+                <td>{{etudiant.nom}}</td>
+                <td>
+                    <a (click)="ajouterAbs(etudiant.mat,etudiant.nom)">
+                        <i class='bx bx-pencil' style="color: #695CFE; font-size: 30px; cursor: pointer;"></i>
+                    </a>
+                </td>
+                <td>
+                    <a (click)="listeAbsenceEtudiant(etudiant.mat,etudiant.nom)">
+                        <i class='bx bx-show' style="color: #695CFE; font-size: 30px; cursor: pointer;"></i>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

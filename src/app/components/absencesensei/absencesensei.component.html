@@ -1,0 +1,27 @@
+<div class="table-container">
+    <h4>Liste d'absence d'Enseignants dont le nom est : {{nom}}</h4>
+    <table style="border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>Tache</th>
+                <th>Date</th>
+                <th>Heure de debut</th>
+                <th>Heure de fin</th>
+                <th>Motif</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e of enseignants">
+                <td>{{e.tache.nom_tache}}</td>
+                <td>{{e.date}}</td>
+                <td>{{e.heure_debut}}</td>
+                <td>{{e.heure_fin}}</td>
+                <td>{{e.motif}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+    <div *ngIf="!(enseignants| keyvalue)?.length" class=" mt-4 alert alert-danger text-center">Y'a pas d'absence pour <b>{{nom}}</b> </div>
+
+</div>
